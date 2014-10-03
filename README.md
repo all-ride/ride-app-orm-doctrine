@@ -64,6 +64,10 @@ Define your entities inside the 'entity' directory inside your module:
         private $id;
 
     }
+    
+Verify your entities are found using:
+
+    php application/cli.php doctrine info
 
 Create your database schema using the CLI:
 
