@@ -2,6 +2,10 @@
 
 This module integrates the Doctrine ORM into the Ride framework.
 
+## Installation
+
+    composer require ride/app-orm-doctrine:dev-master
+
 ## Configuration
 
     # application/config/parameters.json
@@ -40,3 +44,45 @@ This module integrates the Doctrine ORM into the Ride framework.
 
 To set the specific entity manager to use specify this using the --em flag.
 
+## Usage
+
+Define your entities inside the 'entity' directory inside your module:
+
+    # src/ride/application/entity/MyEntity.php
+    use Doctrine\ORM\Mapping as ORM;
+
+    /**
+     * @ORM\Entity()
+     */
+    class MyEntity {
+
+        /**
+         * @ORM\Id()
+         * @ORM\Column(type="integer")
+         * @ORM\GeneratedValue(strategy="AUTO")
+         */
+        private $id;
+
+    }
+
+Create your database schema using the CLI:
+
+    php application/cli.php doctrine schema create
+
+Inject ManagerRegistry where you want to use Doctrine
+
+    # src/ride/application/controller/IndexController.php
+    class IndexController {
+
+        public function __construct(ManagerRegistry $registry) {
+            $this->registry = $registry;
+        }
+
+        public function indexAction() {
+            $em = $this->registry->getManager();
+
+            $em->persist(new MyEntity());
+            $em->flush();
+        }
+
+    }
