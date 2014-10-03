@@ -1,0 +1,20 @@
+{
+    "name": "ride/app-orm-doctrine",
+    "description": "Integrates Doctrine ORM into Ride framework.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ignace Knops",
+            "email": "ignace@statik.be"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "~2.4",
+        "ride/lib-cli-symfony": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}

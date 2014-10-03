@@ -1,0 +1,59 @@
+{
+    "dependencies": [
+        {
+            "interfaces": "ride\\library\\cli\\command\\Command", 
+            "class": "ride\\cli\\command\\orm\\doctrine\\CreateSchemaDoctrineCommand",
+            "id": "doctrine.command.schema.create"
+        },
+        {
+            "interfaces": "ride\\library\\cli\\command\\Command",
+            "class": "ride\\cli\\command\\orm\\doctrine\\DropSchemaDoctrineCommand",
+            "id": "doctrine.command.schema.drop"
+        },
+        {
+            "interfaces": "ride\\library\\cli\\command\\Command",
+            "class": "ride\\cli\\command\\orm\\doctrine\\UpdateSchemaDoctrineCommand",
+            "id": "doctrine.command.schema.update"
+        },
+        {
+            "interfaces": "ride\\library\\cli\\command\\Command",
+            "class": "ride\\cli\\command\\orm\\doctrine\\ValidateSchemaDoctrineCommand",
+            "id": "doctrine.command.schema.validate"
+        },
+        {
+            "interfaces": "ride\\library\\cli\\command\\Command",
+            "class": "ride\\cli\\command\\orm\\doctrine\\GenerateEntitiesDoctrineCommand",
+            "id": "doctrine.command.generate.entities"
+        },
+        {
+            "interfaces": "ride\\library\\cli\\command\\Command",
+            "class": "ride\\cli\\command\\orm\\doctrine\\GenerateProxiesDoctrineCommand",
+            "id": "doctrine.command.generate.proxies"
+        },
+        {
+            "interfaces": "ride\\library\\cli\\command\\Command",
+            "class": "ride\\cli\\command\\orm\\doctrine\\GenerateRepositoriesDoctrineCommand",
+            "id": "doctrine.command.generate.repositories"
+        },
+        {
+            "interfaces": "ride\\library\\cli\\command\\Command",
+            "class": "ride\\cli\\command\\orm\\doctrine\\InfoDoctrineCommand",
+            "id": "doctrine.command.info"
+        },
+        {
+            "interfaces": "ride\\library\\cli\\command\\Command",
+            "class": "ride\\cli\\command\\orm\\doctrine\\RunDqlDoctrineCommand",
+            "id": "doctrine.command.run.dql"
+        },
+        {
+            "interfaces": "ride\\library\\cli\\command\\Command",
+            "class": "ride\\cli\\command\\orm\\doctrine\\EnsureProductionSettingsDoctrineCommand",
+            "id": "doctrine.command.ensure_production_settings"
+        },
+        {
+            "interfaces": "ride\\library\\cli\\command\\Command",
+            "class": "ride\\cli\\command\\orm\\doctrine\\ConvertMappingDoctrineCommand",
+            "id": "doctrine.command.convert_mapping"
+        }
+    ]
+}
